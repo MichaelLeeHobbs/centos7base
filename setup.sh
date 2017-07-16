@@ -85,6 +85,11 @@ function command_updatescript {
     curl -O https://raw.githubusercontent.com/MichaelLeeHobbs/centos7base/master/setup.sh
 }
 
+function command_spigot {
+    scp root@192.168.1.202:~/spigotBuild/start.sh start.sh
+    scp root@192.168.1.202:~/spigotBuild/spigot*.jar
+}
+
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 if [ -n "$(type -t ${command})" ] && [ "$(type -t ${command})" = function ]; then 
