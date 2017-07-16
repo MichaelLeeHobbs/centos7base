@@ -70,6 +70,11 @@ function command_base {
     dnf upgrade -y
 }
 
+function command_nonm {
+    systemctl stop NetworkManager
+    systemctl disable NetworkManager
+}
+
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 if [ -n "$(type -t ${command})" ] && [ "$(type -t ${command})" = function ]; then 
