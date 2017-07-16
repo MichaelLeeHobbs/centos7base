@@ -86,9 +86,10 @@ function command_updatescript {
 }
 
 function command_spigot {
-    scp root@192.168.1.202:~/spigotBuild/start.sh start.sh
-    scp root@192.168.1.202:~/spigotBuild/spigot*.jar
-    echo "eula=true" > eula.txt
+    mkdir -p spigot
+    scp root@192.168.1.202:~/spigotBuild/start.sh ./spigot/start.sh
+    scp root@192.168.1.202:~/spigotBuild/spigot*.jar ./spigot/
+    echo "eula=true" > ./spigot/eula.txt
 }
 
 # -----------------------------------------------------------------
