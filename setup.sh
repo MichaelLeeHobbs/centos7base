@@ -77,7 +77,7 @@ function command_nonm {
 
 function command_xentools {
     mount /dev/cdrom /mnt/
-    ./mnt/Linux/install.sh
+    bash /mnt/Linux/install.sh
     umount /mnt/
 }
 
