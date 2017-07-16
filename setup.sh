@@ -81,6 +81,10 @@ function command_xentools {
     umount /mnt/
 }
 
+function command_updatescript {
+    curl -O https://raw.githubusercontent.com/MichaelLeeHobbs/centos7base/master/setup.sh
+}
+
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 if [ -n "$(type -t ${command})" ] && [ "$(type -t ${command})" = function ]; then 
