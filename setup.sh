@@ -87,8 +87,10 @@ function command_updatescript {
 
 function command_spigot {
     mkdir -p spigot
+    mkdir -p spigot/plugins
     scp root@192.168.1.202:~/spigotBuild/start.sh ./spigot/start.sh
     scp root@192.168.1.202:~/spigotBuild/spigot*.jar ./spigot/
+    scp root@192.168.1.202:~/plugins/LANBroadcaster.jar ./spigot/LANBroadcaster.jar
     echo "eula=true" > ./spigot/eula.txt
     firewall-cmd --add-port 25565/tcp --permanent   # minecraft port
     firewall-cmd --add-port 4445/udp --permanent    # minecraft advertisement port
