@@ -90,6 +90,9 @@ function command_spigot {
     scp root@192.168.1.202:~/spigotBuild/start.sh ./spigot/start.sh
     scp root@192.168.1.202:~/spigotBuild/spigot*.jar ./spigot/
     echo "eula=true" > ./spigot/eula.txt
+    firewall-cmd --add-port 25565/tcp --permanent   # minecraft port
+    firewall-cmd --add-port 4445/udp --permanent    # minecraft advertisement port
+    firewall-cmd --reload
 }
 
 # -----------------------------------------------------------------
