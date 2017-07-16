@@ -75,6 +75,12 @@ function command_nonm {
     systemctl disable NetworkManager
 }
 
+function command_xentools {
+    mount /dev/cdrom /mnt/
+    ./mnt/Linux/install.sh
+    umount /mnt/
+}
+
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 if [ -n "$(type -t ${command})" ] && [ "$(type -t ${command})" = function ]; then 
